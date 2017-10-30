@@ -1,0 +1,10 @@
+function [coeffs] = nSpline(X,y)
+%This function returns the coefficients of the natural cubic spline
+%X and y are the input points where f(X(i)) = y(i)
+%Each spline function on each interval has degree 3
+    
+    numP = length(X);
+    %
+    n = len - 1;
+end
+

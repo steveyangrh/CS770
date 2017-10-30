@@ -44,6 +44,7 @@
 % (This matches ConTeXt defaults)
 \usepackage{amsmath}
 \usepackage{systeme}
+\usepackage{listings}
 
 %%% ToC (table of contents) APPEARANCE
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
@@ -65,10 +66,41 @@
 
 \section{Question 1}
 \subsection{Question 1a}
+For cubic spline, let the function $S(x)$ define the spline function\\\medskip
+\centerline{where $a = x_{0} < x_{1} < x_{2} < x_{3} < ......< x_{n} = b$}
+ 
+\begin{equation}
+  S(X)=\left\{
+  \begin{array}{@{}ll@{}}
+    S_{0}(x), & \text{}\ x_{0}<x<x_{1} \\
+    S_{1}(x), & \text{}\ x_{1}<x<x_{2}\\
+    ......\\
+    S_{i}(x), & \text{} \ x_{i}<x<x_{i+1}\\
+    ......\\
+    S_{n-1}(x), & \text{}\ x_{n-1}<x<x_{n}
+  \end{array}\right.
+\end{equation} 
+\centerline{Where each $S_{i}(x)$ has degree 3 in this case.}\\
+In cubic spline, $S(x)$ satisfies
 \[
-\systeme*{x_1=2r + s -t,x_2= r, x_3=-2s +2t, x_4=s, x_5=t}
+\systeme*{
+S_{i}(x_{i})=S_{i+1}(x_{i}),
+S_{i}'(x_{i})=S_{i+1}'(x_{i}), 
+S_{i}''(x_{i})=S_{i+1}''(x_{i}),
+S_{i}(x_{i}) = y_{i}
+}
+\]
+\centerline{Where each $i = 0, 1, 2, ......, n-2$}\\
+By the definition of natural cubic spline, we have two additional constraints,
+\[
+\systeme*{
+S_{0}''(x_{0})=0,
+S_{n-1}''(x_{n-1})=0
+}
 \]
 \subsection{Question 1b}
+\begin{lstlisting}[language=Octave]
+\end{lstlisting}
 
 \section{Question 2}
 \section{Question 3}
