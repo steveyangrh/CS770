@@ -1,0 +1,394 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amsmath}
+\usepackage[]{algorithm2e}
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{CS 770: Assignment 2}
+\author{Ronghao Yang ID:20511820}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Question 1}
+Algorithm 1 will explain the implementation of row changing in detail. \linebreak\linebreak
+\begin{algorithm}[H]
+ \KwData{$A$ $\in$ $R^{n}$}
+ \KwResult{L,U,P (LU = PA)}
+ L=eye(n)\; P=L\; U=A\;
+ \For{k = 1:n}{
+  ind $\gets$index of the row that its first non-zero number has the largest magnitude\;
+  \If{ind != k}{
+   switch row k and row ind in U\;
+   switch row k and row ind in P\;
+   	\If{k $\ge$ 2}{
+   	switch row k and row ind in L\;
+   	}
+   }
+   L $\gets$ usual way to update L\;
+   U $\gets$ usual way to update U\;
+ }
+ \caption{LU decomposition with row pivoting}
+\end{algorithm}
+
+Let
+\[
+A=
+  \begin{bmatrix}
+    10 & -7 & 0  \\
+    -3 & 4 & 6\\
+    7 & -2 & 5
+  \end{bmatrix}
+\]
+By running the algorithm,
+\[
+L=
+  \begin{bmatrix}
+    1.0000 & 0 & 0  \\
+    0.7000 &1.0000 & 0\\
+    -0.3000 & 0.6552 & 1.0000
+  \end{bmatrix}
+\]
+\[
+U=
+  \begin{bmatrix}
+    10.0000 & -7.0000 & 0  \\
+    0 & 2.9000 & 5.0000\\
+    0 & 0 & 2.7241
+  \end{bmatrix}
+\]
+\[
+P=
+  \begin{bmatrix}
+    1 & 0 & 0  \\
+    0 & 0 & 1\\
+    0 & 1 & 0
+  \end{bmatrix}
+\]
+\[
+L*U = P*A =
+  \begin{bmatrix}
+    10 & -7 & 0  \\
+     7 & -2 & 5\\
+    -3 & 4 & 6
+  \end{bmatrix}
+\]
+\section{Question 2}
+\subsection{Question 2a}
+\[
+M1=
+  \begin{bmatrix}
+    1 & 0 & 0  \\
+    1000 & 1 & 0 \\
+    2000 & 0 & 1
+  \end{bmatrix}
+\]
+\[
+M1*A = A_{2}= (1.0e+03) *
+  \begin{bmatrix}
+    0.000 & 0.002 & 0.003  \\
+    0 & 2.004 & 3.005 \\
+    0 & 4.001 & 6.006
+  \end{bmatrix}
+\]
+\[
+M2=
+  \begin{bmatrix}
+    1.000 & 0 & 0  \\
+    0 & 1.000 & 0 \\
+    0 & -1.997 & 1.000
+  \end{bmatrix}
+\]
+\[
+U = M2*A_{2} = A_{3}= (1.0e+03) *
+  \begin{bmatrix}
+    0.000 & 0.002 & 0.003  \\
+    0 & 2.004 & 3.005 \\
+    0 & -0.001 & 0.005
+  \end{bmatrix}
+\]
+\[
+L = (1.0e+03) *
+  \begin{bmatrix}
+    0.001 & 0 & 0  \\
+    -1.000 & 0.001 & 0 \\
+    -2.000 & 0.002 & 0.001
+  \end{bmatrix}
+\]
+\subsection{Question 2b}
+\[
+L=
+  \begin{bmatrix}
+    1.0000 & 0 & 0  \\
+    0.5000 &1.0000 & 0\\
+    -0.0005 & 0.6299 & 1.0000
+  \end{bmatrix}
+\]
+\[
+U=
+  \begin{bmatrix}
+    -2.0000 & 1..0720 & 5.6430  \\
+    0 & 3.1760 & 1.8015\\
+    0 & 0 & 1.8681
+  \end{bmatrix}
+\]
+\[
+P=
+  \begin{bmatrix}
+    0& 0 & 1  \\
+    0 & 1 & 0\\
+    1 & 0 & 0
+  \end{bmatrix}
+\]
+\[
+L*U  =
+  \begin{bmatrix}
+    -2.0000 & 1.0720 & 5.6430  \\
+     -1.0000 & 3.7120 & 4.6230\\
+    0.0010 & 2.0000 & 3.0000
+  \end{bmatrix}
+\]
+\[
+P*A  =
+  \begin{bmatrix}
+    -2.0000 & 1.0720 & 5.6430  \\
+     -1.0000 & 3.7120 & 4.6230\\
+    0.0010 & 2.0000 & 3.0000
+  \end{bmatrix}
+\]
+\subsection{Question 2c}
+Without pivoting, the LU decomposition could generate numbers with big exponents due to the small denominators. Since we only have four digits mantissa, this could result into losing digits in small numbers.
+
+\section{Question 3}
+Partial Pivoting:\\
+Partial pivoting requires $O(n^{2})$  number of number comparisons to determine the largest pivot. \\\linebreak
+Full Pivoting:\\
+Full pivoting requires $O(n^{3})$ number of number comparisons to determine the largest pivot.
+
+\section{Question 4}
+A has an LU factorization $\gets$ each upper left block $A_{1:k,1:k}$ is nonsingular:\\
+If A has an LU factorization, the A can be written as\\
+\[
+A  =
+  \begin{bmatrix}
+    A_{11} & A_{12}  \\
+    A_{21} & A_{22} 
+  \end{bmatrix} = LU
+\]Where
+\[
+L =
+  \begin{bmatrix}
+    L_{11} & L_{12}  \\
+    L_{21} & L_{22} 
+  \end{bmatrix}
+  U =
+  \begin{bmatrix}
+    U_{11} & U_{12}  \\
+    U_{21} & U_{22} 
+  \end{bmatrix}
+\]
+As we can see here, $A_{11}$ is a product of $L_{11}$ and $U_{11}$,
+so det($A_{11}$) = det($L_{11}$)det($U_{11}$), $L_{11}$ and $U_{11}$ are both triangular matrices, the determinant of a triangular matrix is the just the product of its diagonal entries. Since in both $L_{11}$ and $U_{11}$, their diagonal entries are all non-zero, so det($L_{11}$)det($U_{11}$) is non-zero, so det($A_{11}$) is also non-zero. Therefore, $A_{11}$ is non-singular, so each upper left block $A_{1:k,1:k}$ is non-singular.\\\linebreak
+Each upper left block $A_{1:k,1:k}$ is nonsingular $\gets$ A has an LU factorization :\\
+This problem can be solved by induction:\\
+Step 1:\\
+\centerline{When k = 1: $A_{11} = [1][a_{11}]$}
+\centerline{Since $A_{11}$ is non-singular, we know that $a_{11}$ is not zero}
+Step 2:\\
+\centerline{Assume when k = s, $A_{1:s,1:s}$ = $LU$}
+Step 3:\\
+\centerline{When k = s+1:}\\\\
+\centerline{\[
+A_{1:s+1,1:s+1}  =
+  \begin{bmatrix}
+    A_{1:s,1:s} & a  \\
+    b & c 
+  \end{bmatrix}
+\]}\\\\
+\centerline{We can see that when \[
+L_{new} =
+  \begin{bmatrix}
+    L & 0  \\
+    bU^{-1} & 1 
+  \end{bmatrix}
+  U_{new}  =
+  \begin{bmatrix}
+    L & L^{-1}a \\
+    0 & c - bU^{-1}L^{-1}a
+  \end{bmatrix}
+\]}\\\\
+\centerline{$A_{1:s+1,1:s+1} = L_{new}U_{new}$}\\\\
+\centerline{If we want to show that $L_{new}U_{new}$ is the answer here, we need to show that $U_{22}$ $\ne$ 0}\\\\
+\centerline{As we have seen early,det($A_{1:s+1,1:s+1}$) = det($L_{new}$)det($U_{new}$)}\\\\
+\centerline{Since both $L_{new}$ and $U_{new}$ are triangular matrices}\\\\
+\centerline{The determinant of a triangular matrix is just the product of its diagonal entries}\\\\
+\centerline{Since det($A_{1:s+1,1:s+1}$)$\neq$0}\\\\
+\centerline{Then none of the diagonal entries of $L_{new}$ and $U_{new}$ is 0, so $U_{22}$ $\ne$ 0}\\\\
+\centerline{Proof Done}
+\section{Question 5}
+\subsection{Question 5a}
+We can write A as \\ \[
+A =
+  \begin{bmatrix}
+    a_{11} & a_{12}&.....&a_{1n} \\
+    a_{21} & a_{22}&.....&a_ {2n}\\
+    .......\\
+    a_{n1} & a_{n2}&.....&a_{nn} \\
+  \end{bmatrix}
+\]\\
+Let $A^{-1}$ = 
+\[
+A^{-1} =
+  \begin{bmatrix}
+    b_{11} & b_{12}&.....&b_{1n} \\
+    b_{21} & b_{22}&.....&b_ {2n}\\
+    .......\\
+    b_{n1} & b_{n2}&.....&b_{nn} \\
+  \end{bmatrix}
+\]\\
+Such that:\\
+\centerline{$AA^{-1} = I$}\linebreak
+To simplify this problem, we can write $A^{-1}$ as 
+\[
+A^{-1} =
+  \begin{bmatrix}
+    B_{1} & B_{2}&.....&B_{n} \\
+  \end{bmatrix}
+\]\\
+Where 
+\[
+B_{i} =
+  \begin{bmatrix}
+    b_{1i}\\
+    b_{2i}\\
+    .....\\
+    b_{ni} \\
+  \end{bmatrix}
+\]\linebreak
+We can also write I as:
+\[
+I =
+  \begin{bmatrix}
+    I_{1} & I_{2}&.....&I_{n} \\
+  \end{bmatrix}
+\]\\
+Where 
+\[
+I_{i} =
+  \begin{bmatrix}
+    I_{1i}\\
+    I_{2i}\\
+    .....\\
+    I_{ni} \\
+  \end{bmatrix}
+\]\linebreak
+To solve $A^{-1}$, we can do so by solving all the $B_{i}$s, for each $B_{i}$\\\\
+\centerline{$AB_{i} = I_{i}$}\linebreak
+This algorithm solves $A^{-1}$ by solving n systems of equations.\\\linebreak
+
+An alternative method for calculating the inverse of matrix $A$ is do row operations.\\\linebreak
+\centerline{$[I | A^{-1}]\gets[A | I]$}
+
+\subsection{Question 5b}
+To transform the matrix A to its echelon form, we need \[\dfrac{n(n-1)}{2}\] divisions, \[\dfrac{2n^{3}+3n^{2}-5n}{6}\] multiplications and \[\dfrac{2n^{3}+3n^{2}-5n}{6}\] subtractions. Overall, the cost is $O(n^{3})$.\\\\
+Therefore, if we can save the echelon form of A, then the overall cost is $O(n^{3})$.
+ 
+\subsection{Question 5c}
+To take the advantage of matrix sparsity, we use LU decomposition for inverting a matrix. In this question, we keep using the notations we denoted in Question 5a.\linebreak
+\centerline{$A = LU$}\linebreak
+For each $B_{i}$ and $I_{i}$\\\linebreak
+\centerline{$LUB_{i} = I{i}$}\\\linebreak
+This method is fast, because matrix $I$ is sparse, forward-substitution and backward-substitution can be calculated efficiently. When calculating $Ly = I_{i}$, before we see the first $1$, whenever we see a $0$, we can just replace the corresponding entry in $y$ with 0 $0$ without any calculations. Similar for calculating the inverse of $A$ using row reductions, we can also take the advantage of entries in I being 0, whenever we do a multiplication or addition, if we see a $0$, we could simple set the new entry to the original corresponding entry or just $0$, since $x+0 = x$ and $x \times 0 =0$. 
+
+\section{Question 6}
+When $A$ is a triangular matrix, the inverse of $A$ will be dense. If $A$ is a large matrix, $A^{-1}$ would have most of its entries being non-zero. Storing such a matrix could be really expensive.\\\linebreak
+Besides, calculating the inverse of A requires $O(n^{3})$ of time, while $The\;Thomas\;Algorithm$ requires only 8n-7 flops.
+\section{Question 7}
+By LU factorization with pivoting, $LU = PA$, therefore\\\linebreak
+\centerline{$L_{1}L_{2}....L_{n-1}U = PA$}\\\linebreak
+\centerline{$U = L_{n-1}^{'}L_{n-2}^{'}....L_{1}^{'}PA$}\\\linebreak
+\centerline{Since $PA$ is just interchanging rows of A, $\|PA\|_{max} = \|A\|_{max}$}\\\linebreak
+\centerline{For each $L_{s}^{'}$}\\
+\begin{equation} \label{eq1}
+\begin{split}
+$\|L_{s}^{'}A\|_{max}$ & =  $\max_{i,j}$$\mid$($L_{s}^{'}A$)_{i,j}$\mid$ \\
+ & = $\max_{i,j}$$\mid$$$\sum_{a=1}^{n}$(L_{s}^{'})_{ia}a_{ja}$ $$$\mid$ \\
+ & \leq $\max_{i,j}$$\mid$$$\sum_{a=1}^{n}$(L_{s}^{'})_{ia}$$$\mid$$\max_{i,j}$$\mid$$a_{ij}$ $\mid$\\
+ & = $\|$$L_{s}^{'}$$\|$$_{\infty}$$\max$(A)\\
+ & \leq 2$\max$(A)
+\end{split}
+\end{equation}
+Since there are $n-1$ $L$, the growth factor $\rho$ has an upper bound of $2^{n-1}$
+\section{Question 8}
+The randomized matrix is created by:\\\linebreak
+\centerline{rand(1000,1)*rand(1,1000)}\\\linebreak
+The run time of the LU decomposition by $Matlab$ $lu$ function is around 0.022 seconds, while the run time of the LU decomposition by my own LU function is around 6.187 seconds. Matlab's function runs faster than my code.\\\linebreak
+
+Assumption:\\\linebreak
+The running time of lu algorithm depends on the hardware of the computer and the square of the size of the matrix.
+
+When n = 100:\\\linebreak
+Time: 0.00025 seconds\\\linebreak
+When n = 200:\\\linebreak
+Time: 0.00058 seconds\\\linebreak
+When n = 400:\\\linebreak
+Time: 0.00207 seconds\\\linebreak
+
+As we can see here, from $n = 100$ to $n = 200$, the time change is around twice, it's not obvious to verify the assumption here. From  $n = 200$ to $n = 400$, the size of the matrix increases twice, the runtime increases about 4 times, it maybe a verification for our assumption.
+
+
+
+\end{document}
