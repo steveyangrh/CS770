@@ -115,11 +115,11 @@ function [coeffs] = nSpline(X,y)
     n =numP - 1;
     %n is the number of spline functions
     
-    X = [];
+    K = [];
     %initialize the matrix to be empty
     A = [];
     %A contains all the known values
-    %X*coeffs = A
+    %K*coeffs = A
     
     %we construct the matrix using for loop
     for i = 1:numP
@@ -130,92 +130,187 @@ function [coeffs] = nSpline(X,y)
         %a,b,c,d are indices for the convinience of calculation
         
         if i==1
-            tempX = zeros(1,4*n);
-            tempX(1,c) = 2;
-            tempX(1,d) = 6*X(i);
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,c) = 2;
+            tempK(1,d) = 6*X(i);
+            K = [K;tempK];
             A = [A;0];
-            tempX = zeros(1,4*n);
-            tempX(1,a) = 1;
-            tempX(1,b) = X(i);
-            tempX(1,c) = X(i)^2;
-            tempX(1,d) = X(i)^3;
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,a) = 1;
+            tempK(1,b) = X(i);
+            tempK(1,c) = X(i)^2;
+            tempK(1,d) = X(i)^3;
+            K = [K;tempK];
             A = [A;y(i)];
         end
         
         
         if i==numP
-            tempX = zeros(1,4*n);
-            tempX(1,c-4) = 2;
-            tempX(1,d-4) = 6*X(i);
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,c-4) = 2;
+            tempK(1,d-4) = 6*X(i);
+            K = [K;tempK];
             A = [A;0];
-            tempX = zeros(1,4*n);
-            tempX(1,a-4) = 1;
-            tempX(1,b-4) = X(i);
-            tempX(1,c-4) = X(i)^2;
-            tempX(1,d-4) = X(i)^3;
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,a-4) = 1;
+            tempK(1,b-4) = X(i);
+            tempK(1,c-4) = X(i)^2;
+            tempK(1,d-4) = X(i)^3;
+            K = [K;tempK];
             A = [A;y(i)];
         end
         %these the special end points contraints for natural cubic constraint
         
         if i>1 && i<numP
-            tempX = zeros(1,4*n);
-            tempX(1,c-4) = 2;
-            tempX(1,d-4) = 6*X(i);
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,c-4) = 2;
+            tempK(1,d-4) = 6*X(i);
+            K = [K;tempK];
             A = [A;0];
-            tempX = zeros(1,4*n);
-            tempX(1,a-4) = 1;
-            tempX(1,b-4) = X(i);
-            tempX(1,c-4) = X(i)^2;
-            tempX(1,d-4) = X(i)^3;
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,a-4) = 1;
+            tempK(1,b-4) = X(i);
+            tempK(1,c-4) = X(i)^2;
+            tempK(1,d-4) = X(i)^3;
+            K = [K;tempK];
             A = [A;y(i)];
         end
         %this is the constraint for S(xi) = yi
         
         if i>1 && i<numP
-            tempX = zeros(1,4*n);
-            tempX(1,b-4) = 1;
-            tempX(1,c-4) = 2*X(i);
-            tempX(1,d-4) = 3*X(i)^2;
-            tempX(1,b) = -1;
-            tempX(1,c) = -2*X(i);
-            tempX(1,d) = -3*X(i)^2;
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,b-4) = 1;
+            tempK(1,c-4) = 2*X(i);
+            tempK(1,d-4) = 3*X(i)^2;
+            tempK(1,b) = -1;
+            tempK(1,c) = -2*X(i);
+            tempK(1,d) = -3*X(i)^2;
+            K = [K;tempK];
             A = [A;0];
             %this is the constraint for Si'(xi) = Si+1'(xi)
             
-            tempX = zeros(1,4*n);
-            tempX(1,c-4) = 2;
-            tempX(1,d-4) = 6*X(i);
-            tempX(1,c) = -2;
-            tempX(1,d) = -6*X(i);
-            X = [X;tempX];
+            tempK = zeros(1,4*n);
+            tempK(1,c-4) = 2;
+            tempK(1,d-4) = 6*X(i);
+            tempK(1,c) = -2;
+            tempK(1,d) = -6*X(i);
+            K = [K;tempK];
             A = [A;0];
             %this is the constraint for Si''(xi) = Si+1''(xi)
         end
     end
     
-    coeffs = X\A;
+    coeffs = K\A;
     
 end
 \end{lstlisting}
 
 \section{Question 2}
-\section{Question 3}
+For an interpolating polynomial $P$, it can be expressed as\\\\
+\centerline{$P(x)$ = $a_{0}p_{0}(x)+a_{1}p_{1}(x)+a_{2}p_{2}(x)+......+a_{n-1}p_{n-1}(x)$}\\\\
+In this question, we have four give points $(-1,-5)$, $(0,1)$, $(1,1)$, $(2,1)$
+\subparagraph{• Monomial Basis}\mbox{}\\
+For monomial basis, we have\\ 
+\centerline{$p_{i}(x)$ = $x^{i-1}$, for $i$ = $1,2,...,n$}
+Since we have four points here, the interpolating polynomial should have form of\\
+\centerline{$P(x)$ = $a_{0} + a_{1}x+ a_{2}x^{2} + a_{3}x^{3}$}\\
+By applying matrix calculation, we get\\
+\centerline{$a_{0}=1\;\;a_{1}=2\;\;a_{2}=-3\;\;a_{3}=1$}\\
+\centerline{Therefore, $P(x) = 1+2x-3x^{2}+x^{3}$}
+\subparagraph{• Lagrange Basis}\mbox{}\\
+For Lagrange basis, we have\\
+\centerline{$p_{i}(x)$ = $L_{i}(x)$ = $\prod_{j=1,j \neq i}^{n}\frac{x-x_{j}}{x_{i}-x_{j}}$}\\
+Since we have four points here, the interpolating polynomial should have form of\\
+\centerline{$P(x)$ = $a_{0} p_{0}(x)+ a_{1}p_{1}(x)+ a_{2}p_{2}(x) + a_{3}p_{3}(x)$}\\
+Since for Lagrange basis,\\
+\centerline{$L_{i}(x) = \begin{cases}
+      1, & \text{if}\ i=j \\
+      0, & \text{if}\ i\neq j
+    \end{cases}$}
+\centerline{}\\
+Then we have\\
+\centerline{$P(x) = \sum_{i}^{n}L_{i}(x)f_{i}$}\\
+In this case, we have
+\begin{equation}
+\begin{split}
+P(x)&=-5\frac{x(x-1)(x-2)}{-6}\\
+	&+1\frac{(x+1)(x-1)(x-2)}{2}\\
+	&+1\frac{(x+1)x(x-2)}{-2}\\
+	&+1\frac{(x+1)x(x-1)}{6}
+\end{split}
+\end{equation}
+\subparagraph{• Newton Basis}\mbox{}\\
+For Newton basis, we have\\
+\centerline{$p_{i}(x)$ = $N_{i}(x)$ = $\prod_{j=1,j \neq i}^{n}(x-x_{j})$ }\\
+Our interpolating function should have the form\\
+\begin{equation}
+\begin{split}
+P(x) &= a_{0}\\
+&+a_{1}(x-x_{0})\\
+&+a_{2}(x-x_{0})(x-x_{1})\\
+&+a_{3}(x-x_{0})(x-x_{1})(x-x_{2})
+\end{split}
+\end{equation}
+After calculation we have:\\
+\centerline{$a_{0}=-5\;\;a_{1}=6\;\;a_{2}=-3\;\;a_{3}=1$}\\
+Therefore,
+\begin{equation}
+\begin{split}
+P(x) &= -5\\
+&+6(x+1)\\
+&-3(x+1)x\\
+&+(x+1)x(x-1)
+\end{split}
+\end{equation}
+\section{Question 3 [NOT DONE]}
 \subsection{Question 3a}
+For $f(x) = x^{3}$, we have\\
+\centerline{$f(0)=0$, $f(1)=1$}\\
+Therefore, $P_{n}(x)=x$.\\\\
+Define $\phi(t) = f(t)-P(t)-\frac{f(x)-p(x)}{\omega(x)}\omega(t)$, where $\omega(x) = \prod(x-x_{i})$.\\\\
+In this case, we have $\phi(t) = t^{3}-t-\frac{x^{3}-x}{(x-0)(x-1))}(t^{2}-t)$\\\\
+$\phi'(t) = 3t^{2}-1-\frac{x^{3}-x}{(x-0)(x-1))}(2t-1)$\\\\
+$\phi''(t) = 6t-2\frac{x^{3}-x}{(x-0)(x-1))}$\\\\
+$\xi = \frac{x+1}{3}$
+
 \subsection{Question 3b}
+For $f(x) = (2x-1)^{4}$, we have\\
+\centerline{$f(0)=1$, $f(1)=1$}\\
+Therefore, $P_{n}(x)=1$.\\\\
+Define $\phi(t) = f(t)-P(t)-\frac{f(x)-p(x)}{\omega(x)}\omega(t)$, where $\omega(x) = \prod(x-x_{i})$\\\\
+In this case, we have $\phi(t) = (2x-1)^{4}-1-\frac{(2x-1)^{4}-1}{(x-0)(x-1))}(t^{2}-t)$\\\\
+$\phi'(t) = 8(2t-1)^{3}-\frac{(2x-1)^{4}-1}{(x-0)(x-1))}(2t-1)$\\\\
+$\phi''(t) = 48(2t-1)^{2}-2\frac{(2x-1)^{4}-1}{(x-0)(x-1))}$\\\\
+$\xi$
 
 \section{Question 4}
+\subsection{• $f(x)=sin(\pi x)$}
+\subparagraph{• Equidistant}
+\subparagraph{• Chebyshev points}
+\subsection{• $f(x)=\frac{1}{1+25x^{2}}$}
+\subparagraph{• Equidistant}
+\subparagraph{• Chebyshev points}
+\subsection{• $f(x)=\mid x\mid$}
+\subparagraph{• Equidistant}
+\subparagraph{• Chebyshev points}
 \section{Question 5}
 \subsection{Question 5a}
+Let $x = tan(\theta)$, then\\
+\centerline{$\frac{dx}{d\theta} = sec^{2}\theta$}\\
+Then\\
+\centerline{$dx = sec^{2}\theta d\theta$}\\
+Then\\
+\centerline{$\int\frac{4}{1+x^2}dx$ = $\int\frac{4}{1+tan^2(\theta)}sec^{2}\theta d\theta$}\\
+Since\\
+\centerline{$1+tan^2(\theta) = sec^{2}(\theta)$}\\
+Then\\
+\centerline{$\int\frac{4}{1+x^2}dx$ = $\int 4\;d\theta$ = $4\;\theta + C$, where $C$ is a constant}\\
+Since we have set $x = tan(\theta)$, then $\theta$ = $arctan(x)$\\
+Then we have \\
+\centerline{$\int\frac{4}{1+x^2}dx$ = $4arctan(x)$ + C}\\
+Then $\int_{0}^{1}\frac{4}{1+x^2}dx$ = $\pi$
 \subsection{Question 5b}
 
 \section{Question 6}
 \section{Question 7}
-
 \end{document}
