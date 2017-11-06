@@ -128,6 +128,9 @@ function [coeffs] = nSpline(X,y)
         c = b+1;
         d = c+1;
         %a,b,c,d are indices for the convinience of calculation
+        %a,b,c,d indicate the next polynomial
+        %to access the previous polynomial
+        %use a-4, b-4, c-4, d-4
         
         if i==1
             tempK = zeros(1,4*n);
@@ -163,15 +166,17 @@ function [coeffs] = nSpline(X,y)
         
         if i>1 && i<numP
             tempK = zeros(1,4*n);
-            tempK(1,c-4) = 2;
-            tempK(1,d-4) = 6*X(i);
-            K = [K;tempK];
-            A = [A;0];
-            tempK = zeros(1,4*n);
             tempK(1,a-4) = 1;
             tempK(1,b-4) = X(i);
             tempK(1,c-4) = X(i)^2;
             tempK(1,d-4) = X(i)^3;
+            K = [K;tempK];
+            A = [A;y(i)];
+            tempK = zeros(1,4*n);
+            tempK(1,a) = 1;
+            tempK(1,b) = X(i);
+            tempK(1,c) = X(i)^2;
+            tempK(1,d) = X(i)^3;
             K = [K;tempK];
             A = [A;y(i)];
         end
@@ -204,6 +209,8 @@ function [coeffs] = nSpline(X,y)
     
 end
 \end{lstlisting}
+
+This code has been proven to run correctly, the results for Question 4 was obtained using this function.
 
 \section{Question 2}
 For an interpolating polynomial $P$, it can be expressed as\\\\
@@ -310,7 +317,41 @@ Then we have \\
 \centerline{$\int\frac{4}{1+x^2}dx$ = $4arctan(x)$ + C}\\
 Then $\int_{0}^{1}\frac{4}{1+x^2}dx$ = $\pi$
 \subsection{Question 5b}
-
+Let $f(x) = \frac{4}{1+x^{2}}$\\
+For 
 \section{Question 6}
+$Q(n)$ = $\frac{h_{1}}{2}(f(a)+f(b))+h_{1}\sum_{k=1}^{n-1}f(x_{k})$, where $h_{1} = \frac{b-a}{n}$, $x_{k} = a+kh_{1}$\\\\
+$Q(2n)$ = $\frac{h_{2}}{2}(f(a)+f(b))+h_{2}\sum_{k=1}^{2n-1}f(x_{k})$, where $h_{2} = \frac{b-a}{2n}$, $x_{k} = a+kh_{2}$\\\\
+$Q(4n)$ = $\frac{h_{4}}{2}(f(a)+f(b))+h_{4}\sum_{k=1}^{4n-1}f(x_{k})$, where $h_{4} = \frac{b-a}{4n}$, $x_{k} = a+kh_{4}$\\\\
+$Q(n) - Q(2n)$ = $\frac{h_{1}-h_{2}}{2}(f(a)+f(b))+h_{1}\sum_{k=1}^{n-1}f(x_{k})-h_{2}\sum_{k=1}^{2n-1}f(x_{k})$\\\\
+$Q(2n) - Q(4n)$ = $\frac{h_{2}-h_{4}}{2}(f(a)+f(b))+h_{2}\sum_{k=1}^{2   n-1}f(x_{k})-h_{4}\sum_{k=1}^{4n-1}f(x_{k})$\\\\
+$\frac{Q(n) - Q(2n)}{Q(2n) - Q(4n)}$ = $\frac{\frac{h_{2}}{2}(f(a)+f(b))+h_{1}\sum_{k=1}^{n-1}f(x_{k})-h_{2}\sum_{k=1}^{2n-1}f(x_{k})}{\frac{h_{4}}{2}(f(a)+f(b))+h_{2}\sum_{k=1}^{2   n-1}f(x_{k})-h_{4}\sum_{k=1}^{4n-1}f(x_{k})}$\\\\
+Let $U = h_{1}\sum_{k=1}^{n-1}f(x_{k})-h_{2}\sum_{k=1}^{2n-1}f(x_{k})$,
+$L = h_{2}\sum_{k=1}^{2   n-1}f(x_{k})-h_{4}\sum_{k=1}^{4n-1}f(x_{k})$\\\\
+Then $U$ = $2h_{2}f(a+2h_{2})+2h_{2}f(a+4h_{2})....+2h_{2}f(a+2(n-1)h_{2}) - h_{2}f(a+h_{2})-h_{2}f(a+2h_{2})....-h_{2}f(a+(2n-1)h_{2})$\\\\
+$U$ = $h_{2}f(a+2h_{2})+h_{2}f(a+4h_{2})....+h_{2}f(a+2(n-1)h_{2}) - h_{2}f(a+h_{2})-h_{2}f(a+3h_{2})....-h_{2}f(a+(2n-1)h_{2})$\\\\
+When $n$ goes infinity, $f(a+kh_2) =f(a+(k+1)h_2)$, then we have\\\\
+$U$ = $-h_{2}f(a+(2n-1)h_{2})$ = $-h_2f(b)$
 \section{Question 7}
+For Simpson's rule,\\\\
+\centerline{$\int_{a}^{b}f(x)$ $\approx$ $\frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))$}\\\\
+Then for composite Simpson's rule, we have:\\\\
+\centerline{$\int_{a}^{b}f(x)$ $\approx$ $\frac{h}{3}(f_0+4f_1+2f_2+4f_3+....+2f_{n-2}+4f_{n-1}+f_n)$ }\\\\
+\centerline{$\int_{a}^{b}f(x)$ $\approx$ $\frac{h}{3}(f(x_{0})+2\sum_{j=1}^{\frac{n}{2}-1}f(x_{2j})+4\sum_{j=1}^{\frac{n}{2}}f(x_{2j-1})+f(x_{n}))$}\\\\
+For the error analysis, let $n = 2M$, then we have\\\\
+%\centerline{$S$ = $\frac{h}{3}(f(x_{a})+f(x_{b}))+\frac{2h}{3}\sum_{j=1}^{M-1}f(x_{2j})+\frac{4h}{3}\sum_{j=1}^{M}f(x_{2j-1})$}\\\\
+%\centerline{$\int_{a}^{b}f(x)$ = $S$ + $E_{s}$, where $E_{s}$ is the error term}\\\\
+%Then\\\\
+%\centerline{$\int_{a}^{b}f(x)$ - $S$ = $E_{s}$}
+\centerline{$E(f)$ = $\int_{a}^{b}(f(x)-s(x))dx$}\\\\
+\centerline{$E(f)$ = $\int_{a}^{b}\frac{f^{n+1}(\xi)}{(n+1)!}\prod(x-x_{i})dx$}\\\\
+Then\\\\
+\centerline{$E(f)$ = $\frac{f^{n+1}(\xi)}{(n+1)!}\int_{a}^{b}\prod(x-x_{i})dx$, for some $a<\xi<b$}\\\\
+For Simpson's Rule, we have:\\\\
+\centerline{$\prod(x-x_{i})$ = $(x-a)(x-\frac{a+b}{2})^{2}(x-b)$}\\\\
+Therefore, on one subinterval, we have error $O(h^{5})$\\\\
+When having composite Simpson's rule on the entire interval, we have the error being\\\\
+\centerline{$O(h^{4})$}\\\\
+Since we loss one order of accuracy from local to global.
+
 \end{document}
