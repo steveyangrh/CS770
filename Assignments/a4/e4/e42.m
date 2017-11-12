@@ -18,15 +18,11 @@ y3_c = abs(X_cheby);
 
 X = -1:0.01:1;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{
 %%function1
 y = sin(pi*X);
 yy1 = spline(X_equil,y1_e,X);
 yy2 = spline(X_cheby,y1_c,X);
 subplot(1,3,1);
-%plot(X,y);
-%hold on;
 
 plot(X,yy1);
 %hold on;
@@ -90,55 +86,3 @@ for x = -1:0.01:1;
     plot(x,y_my_e,'o');
     hold on;
 end
-%}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{
-%%function1
-
-y = sin(pi*X);
-yy1 = spline(X_equil,y1_e,X);
-yy2 = spline(X_cheby,y1_c,X);
-a1 = plot(X,y);
-hold on;
-a2 = plot(X,yy1);
-hold on;
-a3 = plot(X,yy2);
-M1 = "Original Function";
-M2 = "Equil Distance";
-M3 = "Cheb points";
-legend([a1,a2,a3], 'northwest', [M1, M2, M3]);
-%}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%function2
-
-y = 1./(1+25*(X.^2));;
-yy1 = spline(X_equil,y2_e,X);
-yy2 = spline(X_cheby,y2_c,X);
-a1 = plot(X,y);
-hold on;
-a2 = plot(X,yy1);
-hold on;
-a3 = plot(X,yy2);
-M1 = "Original Function";
-M2 = "Equil Distance";
-M3 = "Cheb points";
-legend([a1,a2,a3], 'northwest', [M1, M2, M3]);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%function3
-%%function2
-
-y = abs(X);
-yy1 = spline(X_equil,y3_e,X);
-yy2 = spline(X_cheby,y3_c,X);
-plot(X,y);
-hold on;
-plot(X,yy1);
-hold on;
-plot(X,yy2);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%}
