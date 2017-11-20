@@ -112,21 +112,25 @@ $f(x)=((x-0.5)/0.5)^{m}$
 
 \section{Exercise 3}
 For Fourier series,\\\\
-\centerline{$f(x)$ = $\sum_{-\infty}^{\infty}C_{k}e^{2\pi i k x}$}
+\centerline{$a_{k}$ = $2\int_{0}^{1}f(x)cos(2\pi k x)dx$, $b_{k}$ = $2\int_{0}^{1}f(x)sin(2\pi k x)dx$}
 \subsection{Exercise 3a}
 For $f(x)=(cos(8\pi x))^{4}$, \\\\
-\centerline{$C_{k}$ = $\int_{0}^{1}(cos(8\pi x))^{4}e^{-2\pi i k x}$}
+\centerline{$a_{k}$ = $2\int_{0}^{1}(cos(8\pi x))^{4}cos(2\pi k x)dx$, $b_{k}$ = $2\int_{0}^{1}(cos(8\pi x))^{4}sin(2\pi k x)dx$}\\\\
+\centerline{Since $cos(2x) = 2cos(x)^{2}-1$}\\\\
+\centerline{Then $cos(8\pi x)^{4}$ = $\frac{1}{4}(\frac{cos(32\pi x)}{2}+2cos(16\pi x)+1)$}\\\\
+By the orthogonality property,\\\\
+\centerline{$a_{8} =\frac{1}{4}$, $a_{16} = 1$, All $b_{k}$ is 0}
 \subsection{Exercise 3b}
 For $f(x)=x$,\\\\
-\centerline{$C_{k}$ = $\int_{0}^{1}xe^{-2\pi i k x}$}\\\\
-\centerline{Let $u = x, \frac{dv}{dx} = e^{-2\pi i k x}$}\\\\
-\centerline{Then $du = 1, v = \frac{1}{-2\pi i k}e^{-2\pi i k x}$}\\\\
-\centerline{Then $\int xe^{-2\pi i k x}$  = $\frac{x}{-2\pi i k}e^{-2\pi i k x}-\int \frac{1}{-2\pi i k}e^{-2\pi i k x}$}\\\\
-\centerline{$\int xe^{-2\pi i k x}$ = $\frac{x}{-2\pi i k}e^{-2\pi i k x}-\frac{1}{-4\pi^{2}k^2}e^{-2\pi i k x}$}\\\\
-\centerline{Since $C_{k}$ = $\int_{0}^{1}xe^{-2\pi i k x}$}\\\\
-\centerline{Then $C_{k}$ = $(\frac{1}{-2\pi i k}e^{-2\pi i k}-\frac{1}{-4\pi^{2}k^2}e^{-2\pi i k}) - (0 - \frac{1}{-4\pi^{2}k^2})$}\\\\
-\centerline{$C_{k}$ = $\frac{•}{-4\pi^{2}k^2}$}\\\\
-
+%\centerline{$C_{k}$ = $\int_{0}^{1}xe^{-2\pi i k x}$}\\\\
+%\centerline{Let $u = x, \frac{dv}{dx} = e^{-2\pi i k x}$}\\\\
+%\centerline{Then $du = 1, v = \frac{1}{-2\pi i k}e^{-2\pi i k x}$}\\\\
+%\centerline{Then $\int xe^{-2\pi i k x}$  = $\frac{x}{-2\pi i k}e^{-2\pi i k x}-\int \frac{1}{-2\pi i k}e^{-2\pi i k x}$}\\\\
+%\centerline{$\int xe^{-2\pi i k x}$ = $\frac{x}{-2\pi i k}e^{-2\pi i k x}-\frac{1}{-4\pi^{2}k^2}e^{-2\pi i k x}$}\\\\
+%\centerline{Since $C_{k}$ = $\int_{0}^{1}xe^{-2\pi i k x}$}\\\\
+%\centerline{Then $C_{k}$ = $(\frac{1}{-2\pi i k}e^{-2\pi i k}-\frac{1}{-4\pi^{2}k^2}e^{-2\pi i k}) - (0 - \frac{1}{-4\pi^{2}k^2})$}\\\\
+%\centerline{$C_{k}$ = $\frac{•}{-4\pi^{2}k^2}$}\\\\
+\centerline{$a_{k}$ = $\int_{0}^{1}xcos(2\pi k x)dx$, $b_{k}$ = $\int_{0}^{1}xsin(2\pi k x)dx$}\\\\
 
 \section{Exercise 4}
 When the function is periodic on $[a,b]$ instead of being periodic on the interval of $[0,1]$\\\\
@@ -138,6 +142,9 @@ For example,\\\\
 
 \section{Exercise 5}
 \section{Exercise 6}
+\subsection{8.1}
+The phone number is 
+\subsection{8.2}
 
 
 
