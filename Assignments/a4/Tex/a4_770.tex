@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{float}
 
 %%% Examples of Article customizations
 % These packages are optional, depending whether you want the features they provide.
@@ -91,7 +92,7 @@ S_{i}''(x_{i})=S_{i+1}''(x_{i}),
 S_{i}(x_{i}) = y_{i}
 }
 \]
-\centerline{Where each $i = 0, 1, 2, ......, n-2$}\\
+%\centerline{Where each $i = 0, 1, 2, ......, n-2$}\\
 By the definition of natural cubic spline, we have two additional constraints,
 \[
 \systeme*{
@@ -211,7 +212,7 @@ function [coeffs] = nSpline(X,y)
 end
 \end{lstlisting}
 
-This code has been proven to run correctly, the results for Question 4 was obtained using this function.
+This code has been proved to run correctly by running the comparison between this function and the matlab built in $spline$ function. Both functions generated the same results. \\
 
 \section{Question 2}
 For an interpolating polynomial $P$, it can be expressed as\\\\
@@ -270,7 +271,7 @@ P(x) &= -5\\
 &+(x+1)x(x-1)
 \end{split}
 \end{equation}
-\section{Question 3 [NOT DONE]}
+\section{Question 3}
 \subsection{Question 3a}
 For $f(x) = x^{3}$, we have\\
 \centerline{$f(0)=0$, $f(1)=1$}\\
@@ -279,28 +280,69 @@ Define $\phi(t) = f(t)-P(t)-\frac{f(x)-p(x)}{\omega(x)}\omega(t)$, where $\omega
 In this case, we have $\phi(t) = t^{3}-t-\frac{x^{3}-x}{(x-0)(x-1))}(t^{2}-t)$\\\\
 $\phi'(t) = 3t^{2}-1-\frac{x^{3}-x}{(x-0)(x-1))}(2t-1)$\\\\
 $\phi''(t) = 6t-2\frac{x^{3}-x}{(x-0)(x-1))}$\\\\
-$\xi = -\frac{x^3-x}{3(x^2-x)}$
+$\xi = \frac{x^3-x}{3(x^2-x)}$
 
 \subsection{Question 3b}
 For $f(x) = (2x-1)^{4}$, we have\\
 \centerline{$f(0)=1$, $f(1)=1$}\\
 Therefore, $P_{n}(x)=1$.\\\\
 Define $\phi(t) = f(t)-P(t)-\frac{f(x)-p(x)}{\omega(x)}\omega(t)$, where $\omega(x) = \prod(x-x_{i})$\\\\
-In this case, we have $\phi(t) = (2x-1)^{4}-1-\frac{(2x-1)^{4}-1}{(x-0)(x-1))}(t^{2}-t)$\\\\
+In this case, we have $\phi(t) = (2t-1)^{4}-1-\frac{(2x-1)^{4}-1}{(x-0)(x-1))}(t^{2}-t)$\\\\
 $\phi'(t) = 8(2t-1)^{3}-\frac{(2x-1)^{4}-1}{(x-0)(x-1))}(2t-1)$\\\\
 $\phi''(t) = 48(2t-1)^{2}-2\frac{(2x-1)^{4}-1}{(x-0)(x-1))}$\\\\
-$\xi$
+Since $\xi$ is in [0,1], then $\xi = \frac{\sqrt{\frac{(2x-1)^{4}-1}{24x(x-1)}}+1}{2}$
 
 \section{Question 4}
 \subsection{• $f(x)=sin(\pi x)$}
-\includegraphics[scale = 0.3]{e11.png}
-
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e41p.jpg}
+  \captionof{figure}{Polynomial Interpolation}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e41s.jpg}
+  \captionof{figure}{Spline Interpolation}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
 \subsection{• $f(x)=\frac{1}{1+25x^{2}}$}
-\subparagraph{• Equidistant}
-\subparagraph{• Chebyshev points}
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e42p.jpg}
+  \captionof{figure}{Polynomial Interpolation}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e42s.jpg}
+  \captionof{figure}{Spline Interpolation}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
 \subsection{• $f(x)=\mid x\mid$}
-\subparagraph{• Equidistant}
-\subparagraph{• Chebyshev points}
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e43p.jpg}
+  \captionof{figure}{Polynomial Interpolation}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{e43s.jpg}
+  \captionof{figure}{Spline Interpolation}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+By comparing between polynomial interpolation and cubic spline, we can see that cubic spline generates smaller errors. For polynomial interpolation, cheby points give much better results than equil distant points. For cubic spline interpolation, the two kinds of points don't have much difference from each other. 
 \section{Question 5}
 \subsection{Question 5a}
 Let $x = tan(\theta)$, then\\

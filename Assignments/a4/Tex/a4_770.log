@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  11 NOV 2017 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 NOV 2017 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,6 +373,14 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -386,9 +394,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
 \Gm@bindingoffset=\dimen105
 \Gm@wd@mp=\dimen106
 \Gm@odd@mp=\dimen107
@@ -397,7 +405,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen110
 \Gm@layouthoffset=\dimen111
 \Gm@layoutvoffset=\dimen112
-\Gm@dimlist=\toks17
+\Gm@dimlist=\toks19
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
@@ -411,19 +419,19 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen120
 \cmidrulekern=\dimen121
 \defaultaddspace=\dimen122
-\@cmidla=\count91
-\@cmidlb=\count92
+\@cmidla=\count92
+\@cmidlb=\count93
 \@aboverulesep=\dimen123
 \@belowrulesep=\dimen124
-\@thisruleclass=\count93
-\@lastruleclass=\count94
+\@thisruleclass=\count94
+\@lastruleclass=\count95
 \@thisrulewidth=\dimen125
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen126
 \extrarowheight=\dimen127
-\NC@list=\toks18
+\NC@list=\toks20
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
@@ -433,12 +441,12 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plpartopsep=\skip46
 \plitemsep=\skip47
 \plparsep=\skip48
-\pl@lab=\toks19
+\pl@lab=\toks21
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks20
-\verbatim@line=\toks21
+\every@verbatim=\toks22
+\verbatim@line=\toks23
 \verbatim@in@stream=\read1
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
@@ -458,19 +466,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen133
 \caption@hangindent=\dimen134
 )
-\c@ContinuedFloat=\count95
+\c@ContinuedFloat=\count96
+Package caption Info: float package is loaded.
 )
-\c@KVtest=\count96
+\c@KVtest=\count97
 \sf@farskip=\skip49
 \sf@captopadj=\dimen135
 \sf@capskip=\skip50
 \sf@nearskip=\skip51
-\c@subfigure=\count97
-\c@subfigure@save=\count98
-\c@lofdepth=\count99
-\c@subtable=\count100
-\c@subtable@save=\count101
-\c@lotdepth=\count102
+\c@subfigure=\count98
+\c@subfigure@save=\count99
+\c@lofdepth=\count100
+\c@subtable=\count101
+\c@subtable@save=\count102
+\c@lotdepth=\count103
 \sf@top=\skip52
 \sf@bottom=\skip53
 )
@@ -500,7 +509,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks22
+\@emptytoks=\toks24
 \ex@=\dimen136
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -510,41 +519,41 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count103
+\inf@bad=\count104
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count104
-\leftroot@=\count105
+\uproot@=\count105
+\leftroot@=\count106
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count106
-\DOTSCASE@=\count107
+\classnum@=\count107
+\DOTSCASE@=\count108
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
+\Mathstrutbox@=\box28
+\strutbox@=\box29
 \big@size=\dimen138
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count108
-\c@MaxMatrixCols=\count109
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
 \dotsspace@=\muskip10
-\c@parentequation=\count110
-\dspbrk@lvl=\count111
-\tag@help=\toks23
-\row@=\count112
-\column@=\count113
-\maxfields@=\count114
-\andhelp@=\toks24
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks25
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks26
 \eqnshift@=\dimen139
 \alignsep@=\dimen140
 \tagshift@=\dimen141
 \tagwidth@=\dimen142
 \totwidth@=\dimen143
 \lineht@=\dimen144
-\@envbody=\toks25
+\@envbody=\toks27
 \multlinegap=\skip64
 \multlinetaggap=\skip65
-\mathdisplay@stack=\toks26
+\mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -552,37 +561,37 @@ LaTeX Info: Redefining \] on input line 2818.
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count115
-\decimalpart=\count116
+\integerpart=\count116
+\decimalpart=\count117
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/systeme/systeme.tex
-\SYS@systemecode=\toks27
-\SYS@systempreamble=\toks28
-\SYSeqnum=\count117
+\SYS@systemecode=\toks29
+\SYS@systempreamble=\toks30
+\SYSeqnum=\count118
 )
 Package: systeme 2013/12/21 v0.3 Mise en forme de systemes d'equations
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count118
-\lst@gtempboxa=\box28
-\lst@token=\toks29
-\lst@length=\count119
+\lst@mode=\count119
+\lst@gtempboxa=\box30
+\lst@token=\toks31
+\lst@length=\count120
 \lst@currlwidth=\dimen145
-\lst@column=\count120
-\lst@pos=\count121
+\lst@column=\count121
+\lst@pos=\count122
 \lst@lostspace=\dimen146
 \lst@width=\dimen147
-\lst@newlines=\count122
-\lst@lineno=\count123
+\lst@newlines=\count123
+\lst@lineno=\count124
 \lst@maxwidth=\dimen148
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count124
-\lst@skipnumbers=\count125
-\lst@framebox=\box29
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box31
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -637,35 +646,47 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftsubtabindent=\skip101
 \cftsubtabnumwidth=\skip102
 )
-(./a4_770.aux)
+(./a4_770.aux
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+)
 \openout1 = `a4_770.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
+\scratchcounter=\count127
 \scratchdimen=\dimen149
-\scratchbox=\box30
-\nofMPsegments=\count127
-\nofMParguments=\count128
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count129
+\scratchbox=\box32
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count130
 \MPscratchDim=\dimen150
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -750,257 +771,321 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count132
+\c@lstlisting=\count133
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (21.9409pt too wide) in paragraph at lines 105--106
+Overfull \hbox (21.9409pt too wide) in paragraph at lines 106--107
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 123.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
  [2]
-Overfull \hbox (87.64159pt too wide) in paragraph at lines 166--168
+Overfull \hbox (87.64159pt too wide) in paragraph at lines 167--169
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 168.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 169.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 168.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 169.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 220
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 221
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 220.
+LaTeX Font Info:    No file OMScmss.fd. on input line 221.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 220.
+(Font)              for symbol `textbullet' on input line 221.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 250--254
+Underfull \hbox (badness 10000) in paragraph at lines 251--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--284
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 285--293
+Underfull \hbox (badness 10000) in paragraph at lines 286--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--293
+Underfull \hbox (badness 10000) in paragraph at lines 286--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--293
+Underfull \hbox (badness 10000) in paragraph at lines 286--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--293
+Underfull \hbox (badness 10000) in paragraph at lines 286--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--293
+Underfull \hbox (badness 10000) in paragraph at lines 286--294
 
  []
 
-<images/e11.png, id=32, 1124.2pt x 843.15pt>
-File: images/e11.png Graphic file (type png)
- <use images/e11.png>
-Package pdftex.def Info: images/e11.png used on input line 296.
-(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
- [6] [7 <./images/e11.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
+<images/e41p.jpg, id=32, 1124.2pt x 843.15pt>
+File: images/e41p.jpg Graphic file (type jpg)
+ <use images/e41p.jpg>
+Package pdftex.def Info: images/e41p.jpg used on input line 301.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 301--302
+ [][] 
  []
 
+<images/e41s.jpg, id=33, 1124.2pt x 843.15pt>
+File: images/e41s.jpg Graphic file (type jpg)
+ <use images/e41s.jpg>
+Package pdftex.def Info: images/e41s.jpg used on input line 307.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
-
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 307--308
+ [][] 
  []
 
+[6] <images/e42p.jpg, id=40, 1124.2pt x 843.15pt>
+File: images/e42p.jpg Graphic file (type jpg)
+ <use images/e42p.jpg>
+Package pdftex.def Info: images/e42p.jpg used on input line 317.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
-
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 317--318
+ [][] 
  []
 
+<images/e42s.jpg, id=41, 1124.2pt x 843.15pt>
+File: images/e42s.jpg Graphic file (type jpg)
+ <use images/e42s.jpg>
+Package pdftex.def Info: images/e42s.jpg used on input line 323.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
-
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 323--324
+ [][] 
  []
 
+<images/e43p.jpg, id=42, 1124.2pt x 843.15pt>
+File: images/e43p.jpg Graphic file (type jpg)
+ <use images/e43p.jpg>
+Package pdftex.def Info: images/e43p.jpg used on input line 334.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--330
-
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 334--335
+ [][] 
  []
 
+<images/e43s.jpg, id=43, 1124.2pt x 843.15pt>
+File: images/e43s.jpg Graphic file (type jpg)
+ <use images/e43s.jpg>
+Package pdftex.def Info: images/e43s.jpg used on input line 340.
+(pdftex.def)             Requested size: 230.04079pt x 172.52522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--330
-
+Overfull \hbox (20.91396pt too wide) in paragraph at lines 340--341
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+[7 <./images/e41p.jpg> <./images/e41s.jpg> <./images/e42p.jpg> <./images/e42s.j
+pg>]
+Underfull \hbox (badness 10000) in paragraph at lines 363--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 363--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 363--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 363--369
+
+ []
+
+[8 <./images/e43p.jpg> <./images/e43s.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--359
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
 
  []
 
-[9] (./a4_770.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--401
+
+ []
+
+[9] [10] (./a4_770.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7590 strings out of 492995
- 106560 string characters out of 6132704
- 223038 words of memory out of 5000000
- 11027 multiletter control sequences out of 15000+600000
+ 7668 strings out of 492995
+ 107721 string characters out of 6132704
+ 224635 words of memory out of 5000000
+ 11096 multiletter control sequences out of 15000+600000
  12477 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,43p,369b,2232s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1019,12 +1104,13 @@ texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on a4_770.pdf (9 pages, 240856 bytes).
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on a4_770.pdf (10 pages, 475863 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
