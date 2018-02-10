@@ -1,12 +1,19 @@
 clear
 
-x = 0:0.1:1;
+n = 11;
+
+x = linspace(0,1,n+1);
+x = x(1:n);
 
 f = cos(8*pi*x).^4;
 
-F = 1./4*sin(16*pi*x)+sin(32*pi*x);
+[C,A] = myDFT(f,x);
 
-f-F
+C
+
+
+
+
 
 
 

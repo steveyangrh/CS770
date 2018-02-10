@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-n = 50;
+n = 21;
 
 f = 'x';
 f = inline(f);

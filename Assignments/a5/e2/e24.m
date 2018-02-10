@@ -2,9 +2,9 @@ clear
 close all
 clc
 
-n = 100;
+n = 101;
 
-m=100;
+m=6;
 
 f = '((x-0.5)./0.5)';
 f = inline(f);

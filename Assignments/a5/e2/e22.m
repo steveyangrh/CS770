@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-n =500;
+n =21;
 
 f = 'exp(cos(2*pi*x))';
 f = inline(f);

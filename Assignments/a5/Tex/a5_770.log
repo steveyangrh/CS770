@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 NOV 2017 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 NOV 2017 01:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -474,43 +474,81 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \sf@top=\skip52
 \sf@bottom=\skip53
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip54
-\f@ncyO@elh=\skip55
-\f@ncyO@erh=\skip56
-\f@ncyO@olh=\skip57
-\f@ncyO@orh=\skip58
-\f@ncyO@elf=\skip59
-\f@ncyO@erf=\skip60
-\f@ncyO@olf=\skip61
-\f@ncyO@orf=\skip62
+(/usr/local/texlive/2017/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+\c@float@type=\count103
+\float@exts=\toks22
+\float@box=\box26
+\@floatcapt=\box27
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks23
+\flrow@foot=\insert199
+\FB@wd=\dimen136
+\FBo@wd=\dimen137
+\FBc@wd=\dimen138
+\FBo@ht=\skip54
+\FBc@ht=\skip55
+\FBf@ht=\skip56
+\FBo@max=\skip57
+\FBc@max=\skip58
+\FBf@max=\skip59
+\c@FBl@b=\count104
+\floatbox@depth=\count105
+\c@FRobj=\count106
+\c@FRsobj=\count107
+\Xhsize=\skip60
+\sXhsize=\skip61
+\Zhsize=\skip62
+\sZhsize=\skip63
+\flrow@rowbox=\box28
+\FR@Zunitlength=\dimen139
+\c@FBcnt=\count108
+\FPOScnt=\count109
+\LTleft=\skip64
+\LTright=\skip65
+\LTleft=\skip66
+\LTright=\skip67
+\flrow@types=\toks24
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count103
-\lst@gtempboxa=\box26
-\lst@token=\toks22
-\lst@length=\count104
-\lst@currlwidth=\dimen136
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen137
-\lst@width=\dimen138
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen139
+\lst@mode=\count110
+\lst@gtempboxa=\box29
+\lst@token=\toks25
+\lst@length=\count111
+\lst@currlwidth=\dimen140
+\lst@column=\count112
+\lst@pos=\count113
+\lst@lostspace=\dimen141
+\lst@width=\dimen142
+\lst@newlines=\count114
+\lst@lineno=\count115
+\lst@maxwidth=\dimen143
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
-\lst@framebox=\box27
+\c@lstnumber=\count116
+\lst@skipnumbers=\count117
+\lst@framebox=\box30
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip68
+\f@ncyO@elh=\skip69
+\f@ncyO@erh=\skip70
+\f@ncyO@olh=\skip71
+\f@ncyO@orh=\skip72
+\f@ncyO@elf=\skip73
+\f@ncyO@erf=\skip74
+\f@ncyO@olf=\skip75
+\f@ncyO@orf=\skip76
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
@@ -525,59 +563,59 @@ Package tocbibind Note: Using section or other style headings.
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 44.
-\cftparskip=\skip63
-\cftbeforetoctitleskip=\skip64
-\cftaftertoctitleskip=\skip65
-\cftbeforepartskip=\skip66
-\cftpartnumwidth=\skip67
-\cftpartindent=\skip68
-\cftbeforesecskip=\skip69
-\cftsecindent=\skip70
-\cftsecnumwidth=\skip71
-\cftbeforesubsecskip=\skip72
-\cftsubsecindent=\skip73
-\cftsubsecnumwidth=\skip74
-\cftbeforesubsubsecskip=\skip75
-\cftsubsubsecindent=\skip76
-\cftsubsubsecnumwidth=\skip77
-\cftbeforeparaskip=\skip78
-\cftparaindent=\skip79
-\cftparanumwidth=\skip80
-\cftbeforesubparaskip=\skip81
-\cftsubparaindent=\skip82
-\cftsubparanumwidth=\skip83
-\cftbeforeloftitleskip=\skip84
-\cftafterloftitleskip=\skip85
-\cftbeforefigskip=\skip86
-\cftfigindent=\skip87
-\cftfignumwidth=\skip88
-\cftbeforelottitleskip=\skip89
-\cftafterlottitleskip=\skip90
-\cftbeforetabskip=\skip91
-\cfttabindent=\skip92
-\cfttabnumwidth=\skip93
-\cftbeforesubfigskip=\skip94
-\cftsubfigindent=\skip95
-\cftsubfignumwidth=\skip96
-\cftbeforesubtabskip=\skip97
-\cftsubtabindent=\skip98
-\cftsubtabnumwidth=\skip99
+\cftparskip=\skip77
+\cftbeforetoctitleskip=\skip78
+\cftaftertoctitleskip=\skip79
+\cftbeforepartskip=\skip80
+\cftpartnumwidth=\skip81
+\cftpartindent=\skip82
+\cftbeforesecskip=\skip83
+\cftsecindent=\skip84
+\cftsecnumwidth=\skip85
+\cftbeforesubsecskip=\skip86
+\cftsubsecindent=\skip87
+\cftsubsecnumwidth=\skip88
+\cftbeforesubsubsecskip=\skip89
+\cftsubsubsecindent=\skip90
+\cftsubsubsecnumwidth=\skip91
+\cftbeforeparaskip=\skip92
+\cftparaindent=\skip93
+\cftparanumwidth=\skip94
+\cftbeforesubparaskip=\skip95
+\cftsubparaindent=\skip96
+\cftsubparanumwidth=\skip97
+\cftbeforeloftitleskip=\skip98
+\cftafterloftitleskip=\skip99
+\cftbeforefigskip=\skip100
+\cftfigindent=\skip101
+\cftfignumwidth=\skip102
+\cftbeforelottitleskip=\skip103
+\cftafterlottitleskip=\skip104
+\cftbeforetabskip=\skip105
+\cfttabindent=\skip106
+\cfttabnumwidth=\skip107
+\cftbeforesubfigskip=\skip108
+\cftsubfigindent=\skip109
+\cftsubfignumwidth=\skip110
+\cftbeforesubtabskip=\skip111
+\cftsubtabindent=\skip112
+\cftsubtabnumwidth=\skip113
 )
 (./a5_770.aux)
 \openout1 = `a5_770.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -615,17 +653,17 @@ LaTeX Font Info:    ... okay on input line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen140
-\scratchbox=\box28
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen141
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count118
+\scratchdimen=\dimen144
+\scratchbox=\box31
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen145
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -674,141 +712,494 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count117
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/floatrow/fr-subfig.sty
+Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
+\FBsc@max=\skip114
+\FBso@max=\skip115
+)
+\c@lstlisting=\count124
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 64.
+(Font)              <12> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 64.
+(Font)              <8> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 64.
+(Font)              <6> on input line 68.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 83.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 72.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
-
-Overfull \hbox (2.2307pt too wide) in paragraph at lines 88--89
+Overfull \hbox (23.25023pt too wide) in paragraph at lines 92--93
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (2.55473pt too wide) in paragraph at lines 102--103
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 113.
+<images/e211.jpg, id=12, 1124.2pt x 843.15pt>
+File: images/e211.jpg Graphic file (type jpg)
+ <use images/e211.jpg>
+Package pdftex.def Info: images/e211.jpg used on input line 114.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+<images/e221.jpg, id=13, 1124.2pt x 843.15pt>
+File: images/e221.jpg Graphic file (type jpg)
+ <use images/e221.jpg>
+Package pdftex.def Info: images/e221.jpg used on input line 118.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+ [2 <./images/e211.jpg>] <images/e231.jpg, id=18, 1124.2pt x 843.15pt>
+File: images/e231.jpg Graphic file (type jpg)
+
+<use images/e231.jpg>
+Package pdftex.def Info: images/e231.jpg used on input line 122.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+ [3 <./images/e221.jpg>]
+<images/e241.jpg, id=22, 1124.2pt x 843.15pt>
+File: images/e241.jpg Graphic file (type jpg)
+ <use images/e241.jpg>
+Package pdftex.def Info: images/e241.jpg used on input line 127.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+<images/e242.jpg, id=23, 1124.2pt x 843.15pt>
+File: images/e242.jpg Graphic file (type jpg)
+ <use images/e242.jpg>
+Package pdftex.def Info: images/e242.jpg used on input line 129.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+<images/e243.jpg, id=24, 1124.2pt x 843.15pt>
+File: images/e243.jpg Graphic file (type jpg)
+ <use images/e243.jpg>
+Package pdftex.def Info: images/e243.jpg used on input line 131.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+<images/e244.jpg, id=25, 1124.2pt x 843.15pt>
+File: images/e244.jpg Graphic file (type jpg)
+ <use images/e244.jpg>
+Package pdftex.def Info: images/e244.jpg used on input line 133.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--136
+
+ []
+
+[4 <./images/e231.jpg>] [5 <./images/e241.jpg> <./images/e242.jpg>] [6 <./image
+s/e243.jpg> <./images/e244.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--134
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--134
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--134
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
 
  []
 
-[3] (./a5_770.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--158
+
+ []
+
+[7] <images/e321.png, id=43, 1124.2pt x 843.15pt>
+File: images/e321.png Graphic file (type png)
+ <use images/e321.png>
+Package pdftex.def Info: images/e321.png used on input line 185.
+(pdftex.def)             Requested size: 449.67204pt x 337.25401pt.
+
+<images/e322.png, id=44, 1124.2pt x 843.15pt>
+File: images/e322.png Graphic file (type png)
+ <use images/e322.png>
+Package pdftex.def Info: images/e322.png used on input line 187.
+(pdftex.def)             Requested size: 449.67204pt x 337.25401pt.
+
+<images/e323.png, id=45, 1124.2pt x 843.15pt>
+File: images/e323.png Graphic file (type png)
+ <use images/e323.png>
+Package pdftex.def Info: images/e323.png used on input line 189.
+(pdftex.def)             Requested size: 449.67204pt x 337.25401pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--191
+
+ []
+
+
+Overfull \hbox (31.41837pt too wide) in paragraph at lines 159--191
+[]
+ []
+
+
+Overfull \hbox (31.41837pt too wide) in paragraph at lines 159--191
+[]
+ []
+
+
+Overfull \hbox (31.41837pt too wide) in paragraph at lines 159--191
+[] 
+ []
+
+[8] [9 <./images/e321.png (PNG copy)>] [10 <./images/e322.png (PNG copy)>]
+<images/e41.jpg, id=57, 1124.2pt x 843.15pt>
+File: images/e41.jpg Graphic file (type jpg)
+ <use images/e41.jpg>
+Package pdftex.def Info: images/e41.jpg used on input line 207.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+[11 <./images/e323.png (PNG copy)>]
+<images/e51.jpg, id=62, 1124.2pt x 843.15pt>
+File: images/e51.jpg Graphic file (type jpg)
+ <use images/e51.jpg>
+Package pdftex.def Info: images/e51.jpg used on input line 213.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+[12 <./images/e41.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+<images/e60.jpg, id=66, 1124.2pt x 843.15pt>
+File: images/e60.jpg Graphic file (type jpg)
+ <use images/e60.jpg>
+Package pdftex.def Info: images/e60.jpg used on input line 221.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e61.jpg, id=67, 1124.2pt x 843.15pt>
+File: images/e61.jpg Graphic file (type jpg)
+ <use images/e61.jpg>
+Package pdftex.def Info: images/e61.jpg used on input line 222.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e62.jpg, id=68, 1124.2pt x 843.15pt>
+File: images/e62.jpg Graphic file (type jpg)
+ <use images/e62.jpg>
+Package pdftex.def Info: images/e62.jpg used on input line 223.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e63.jpg, id=69, 1124.2pt x 843.15pt>
+File: images/e63.jpg Graphic file (type jpg)
+ <use images/e63.jpg>
+Package pdftex.def Info: images/e63.jpg used on input line 224.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e64.jpg, id=70, 1124.2pt x 843.15pt>
+File: images/e64.jpg Graphic file (type jpg)
+ <use images/e64.jpg>
+Package pdftex.def Info: images/e64.jpg used on input line 225.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e65.jpg, id=71, 1124.2pt x 843.15pt>
+File: images/e65.jpg Graphic file (type jpg)
+ <use images/e65.jpg>
+Package pdftex.def Info: images/e65.jpg used on input line 226.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e66.jpg, id=72, 1124.2pt x 843.15pt>
+File: images/e66.jpg Graphic file (type jpg)
+ <use images/e66.jpg>
+Package pdftex.def Info: images/e66.jpg used on input line 227.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e67.jpg, id=73, 1124.2pt x 843.15pt>
+File: images/e67.jpg Graphic file (type jpg)
+ <use images/e67.jpg>
+Package pdftex.def Info: images/e67.jpg used on input line 228.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e68.jpg, id=74, 1124.2pt x 843.15pt>
+File: images/e68.jpg Graphic file (type jpg)
+ <use images/e68.jpg>
+Package pdftex.def Info: images/e68.jpg used on input line 229.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e69.jpg, id=75, 1124.2pt x 843.15pt>
+File: images/e69.jpg Graphic file (type jpg)
+ <use images/e69.jpg>
+Package pdftex.def Info: images/e69.jpg used on input line 230.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+
+<images/e10.jpg, id=76, 1124.2pt x 843.15pt>
+File: images/e10.jpg Graphic file (type jpg)
+ <use images/e10.jpg>
+Package pdftex.def Info: images/e10.jpg used on input line 231.
+(pdftex.def)             Requested size: 125.47737pt x 94.09764pt.
+ [13 <./images/e51.jpg> <./images/e60.jpg> <./images/e61.jpg> <./images/e62.jpg
+>] [14 <./images/e63.jpg> <./images/e64.jpg> <./images/e65.jpg> <./images/e66.j
+pg> <./images/e67.jpg> <./images/e68.jpg> <./images/e69.jpg> <./images/e10.jpg>
+] [15]
+(./a5_770.aux) ) 
 Here is how much of TeX's memory you used:
- 6530 strings out of 492995
- 92601 string characters out of 6132704
- 193478 words of memory out of 5000000
- 10007 multiletter control sequences out of 15000+600000
- 10359 words of font info for 36 fonts, out of 8000000 for 9000
+ 7210 strings out of 492995
+ 102813 string characters out of 6132704
+ 211614 words of memory out of 5000000
+ 10652 multiletter control sequences out of 15000+600000
+ 10041 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,232b,2161s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on a5_770.pdf (3 pages, 140952 bytes).
+ 44i,12n,43p,367b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmitt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on a5_770.pdf (15 pages, 933806 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

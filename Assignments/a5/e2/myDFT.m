@@ -25,10 +25,13 @@ function [C,A] = myDFT(f,X)
     
     N = length(X);
     A = zeros(1,N);
-    for j = 0:N-1
-        for k = 0:n-1
-            A(j+1) = A(j+1) + C(k+1)*exp(2*pi*(k)*i*X(j+1));            
+    
+    for i = 1:N
+        for j = 1:(n-1)./2
+            A(i) = A(i) + 2*real(C(j+1))*cos(2*pi*j*X(i))-...
+            2*imag(C(j+1))*sin(2*pi*j*X(i));
         end
+        A(i) = A(i) + C(1);
     end
     % Calculating the DFT approximations
 end

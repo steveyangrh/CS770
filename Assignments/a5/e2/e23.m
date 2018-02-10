@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-n = 100;
+n = 21;
 
 f = '((x-0.5)./0.5).^2';
 f = inline(f);

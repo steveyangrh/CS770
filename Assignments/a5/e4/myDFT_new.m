@@ -9,6 +9,7 @@ function [C,A] = myDFT_new(f,x,X,a,b)
 
     I = b-a;
     
+    
     n = length(f);
     % n is the number of points
     
@@ -20,18 +21,20 @@ function [C,A] = myDFT_new(f,x,X,a,b)
     
     for k = 0:n-1
         for j = 0:n-1
-            C(k+1) = C(k+1)+(1./n)*f(j+1)*exp(-2*(pi./I)*k*(x(j+1)-a)*i);
+            C(k+1) = C(k+1)+(1./n)*f(j+1)*exp(-2*pi*k*(x(j+1)-a)*i./I);
         end
     end
     % Calculating the DFT coefficients
     
     N = length(X);
     A = zeros(1,N);
-    for j = 0:N-1
-        for k = 0:n-1
-            A(j+1) = A(j+1) + C(k+1)*exp(2*(pi./I)*(k)*i*(X(j+1)-a));            
+    
+    for i = 1:N
+        for j = 1:(n-1)./2
+            A(i) = A(i) + 2*real(C(j+1))*cos(2*pi*j*(X(i)-a)./I)-...
+            2*imag(C(j+1))*sin(2*pi*j*(X(i)-a)./I);
         end
+        A(i) = A(i) + C(1);
     end
     % Calculating the DFT approximations
 end
-
