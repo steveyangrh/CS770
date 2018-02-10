@@ -1,0 +1,166 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{listings}
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{CS 770: Assignment 6}
+\author{Ronghao Yang\\ID: 20511820}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Exercise 1}
+The general form of RK method is:\\
+\centerline{$y_{n} = y_{n-1}+h\sum_{i=1}^{s}b_{i}K{i}$}\\
+Where\\
+\centerline{$K_{i} = f(y_{n-1}+h\sum_{j=1}^{s}a_{ij}K_{j},t_{n-1}+c_{i}h)$}\\
+For explicit two stage Runge-Kutta methods, we have\\
+\centerline{$K_{1} = f(y_{n-1},t_{n-1})$}
+\centerline{$K_{2} = f(y_{n-1}+haK_{1},t_{n-1}+ch)$}
+\centerline{$y(t_{n})=y_{n-1}+h(b_{1}K_{1}+b_{2}K_{2})$}
+Using explicit two stage Runge-Kutta methods,\\
+\centerline{$y_{n} = y(t_{n-1})+h(b_1f+b_2(f+ahff_y+chf_t)+O(h^2))$}
+Compared with $y(t_{n})$\\
+\centerline{$y(t_{n}) = y(t_{n-1})+hf+(f_yf+f_t)\frac{h^2}{2}+O(h^3)$}
+When all the terms are matched, the error is smallest, we have:\\
+\centerline{$b_1+b_2=1$, $ab_2=\frac{1}{2}$, $cb_2=\frac{1}{2}$}
+Using $b_2$ to represent all variables, we have:\\
+\centerline{$b_1=1-b_2$, $a = \frac{1}{2b_2}$, $c = \frac{1}{2b_2}$}
+The local error is defined by $d_{n} = y(t_{n})-y_{n}$, then after simplifying, only $O(h^3)$ term is left in $d_{n}$.\\
+Therefore, no choice of coefficients in the one parameter family of the explicit two stage Runge-Kutta methods derived in class will result in the local error of order 4
+\section{Exercise 2}
+\subsection{Exercise 2a}
+\centerline{$d_{n} = y(t_{n})-y_{n}$}
+\centerline{$d_{n} = y(t_{n})-y(t_{n-1})-h(\theta f(y_{n})+(1-\theta)f(y_{n-1}))$}
+\centerline{$d_{n} = y(t_{n})-y(t_{n-1})-h\theta f(y_{n})-h(1-\theta)f(y_{n-1})$}
+Using Taylor's expansion:\mbox{}\\
+\centerline{$y(t_{n}) = y(t_{n-1})+hy'(t_{n-1})+\frac{h^{2}}{2}y''(t_{n-1})+\frac{h^{3}}{6}y'''(t_{n-1})+O(h^{4})$}
+\centerline{$y'(t_{n}) = y'(t_{n-1}) + hy''(t_{n-1})+\frac{h}{2}y'''(t_{n-1})+O(h^3)$}
+\centerline{$d_{n}=(-\theta+\frac{1}{2})h^{2}y''(t_{n-1})+\frac{1}{2}(-\theta+\frac{1}{3})h^{3}y'''(t_{n-1})+O(h^4)$}\\
+When $\theta = \frac{1}{2}$, $d_{n}$ is the smallest, $d_{n}$ is bounded to $O(h^3)$, otherwise $d_{n}$ is bounded by $O(h^2)$
+\subsection{Exercise 2b}
+\centerline{$y(t_{n})=y(t_{n-1})+h(\theta f(y_{n})+(1-\theta)f(y_{n-1}))$}
+\centerline{$y(t_{n})=y(t_{n-1})+h(\lambda \theta y(t_{n})+\lambda (1-\theta) y(t_{n-1}))$}
+\centerline{$(1-h\theta\lambda)y(t_{n}) = (1+h\lambda (1-\theta))y(t_{n-1})$}
+\centerline{$\frac{y(t_{n})}{y(t_{n-1})}=\frac{1+(1-\theta) h\lambda }{1-\theta h\lambda}$}
+\centerline{$\mid \frac{1+(1-\theta) h\lambda }{1-\theta h\lambda} \mid \leq 1$}
+Let $z =  h\lambda$. then\\
+\centerline{$\mid \frac{1+(1-\theta) z }{1-\theta z} \mid \leq 1$}
+\centerline{$\mid 1+(1-\theta)z \mid \leq \mid 1-\theta z \mid$}
+\centerline{Let $z = a+bi$}
+After simplifying, we get\\
+\centerline{$2a\leq (a^2+b^2)(2\theta -1)$}
+When $\theta \in [\frac{1}{2},1]$, the absolute stability region contains the whole left half plane of the complex plane
+\section{Exercise 3}
+\subsection{Exercise 3a}
+\begin{lstlisting}[language=Octave]
+function [tout,yout] = myrk4(F,tspan,y0,h,varargin)
+%MYRK4  My own version of classical fourth order Runge-Kutta.
+%   Usage is same as ODE23TX, except fourth argument is fixed step size, h.
+%   MYRK4(F,TSPAN,Y0,H) with TSPAN = [T0 TFINAL] integrates the system
+%   of differential equations y' = f(t,y) from t = T0 to t = TFINAL.
+%   The initial condition is y(T0) = Y0.
+%   With two output arguments, [T,Y] = MYRK4(...) returns a column 
+%   vector T and an array Y where Y(:,k) is the solution at T(k).
+%   With no output arguments, MYRK4 plots the emerging solution.
+%   More than four input arguments, MYRK4(F,TSPAN,Y0,H,P1,P2,...),
+%   are passed on to F, F(T,Y,P1,P2,...).
+
+    t0 = tspan(1);
+    tfinal = tspan(2);
+    t = t0;
+    y = y0(:);
+
+  
+    tout = t;
+    yout = y.';
+    
+
+    while t ~= tfinal
+
+      s1 = F(t, y, varargin{:});
+
+      if 1.1*abs(h) >= abs(tfinal - t)
+        h = tfinal - t;
+      end
+
+      s2 = F(t+h/2, y+(h/2)*s1, varargin{:});
+      s3 = F(t+h/2, y+(h/2)*s2, varargin{:});
+      s4 = F(t+h, y+h*s3, varargin{:});
+
+      tnew = t + h;
+      ynew = y + h*(s1 + 2*s2 + 2*s3 + s4)/6;
+
+      tout(end+1,1) = tnew; 
+      yout(end+1,:) = ynew.';
+
+      t = tnew;
+      y = ynew;
+    end
+
+end
+\end{lstlisting}
+\subsection{Exercise 3b}
+When the size of the h is cut by half, the error goes down to $\frac{1}{16}$. The reason is the following. At step size h, the error is estimated by $e_{h} = Ch^{4}$. When h goes to $\frac{h}{2}$, we have $e_{\frac{h}{2}} = C(\frac{h}{2})^{4} = C\frac{h^4}{16}$.\\
+To illustrate this, let h = $\pi$ and $\frac{\pi}{2}$. When h = $\pi$, the error is around 0.8169, when h = $\frac{\pi}{2}$, the error is around 0.0818 which is roughly about $\frac{1}{16}$ of 0.8169.
+\subsection{Exercise 3c}
+When having a system of equations, let v = y', u = y, then we have u' = v, v' = -u.\\
+By running \\
+\centerline{ode23(@(t,y) [0 1;-1 0]*y , tspan, [1;0], pi/50)}
+And\\
+\centerline{ode45(@(t,y) [0 1;-1 0]*y , tspan, [1;0], pi/50)}
+Ode23 requires more steps than myrk4 and ode45 requires less step when the relative tolerance is set to be 1e-6. With relative tolerance being 1e-3, both methods require less steps than 100.
+%For ode23, the number of steps is 35. For ode45, the number of steps is 85. Compared to 100 steps using myrk4, ode
+\end{document}
